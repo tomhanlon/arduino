@@ -3,8 +3,7 @@ void setup()
   pinMode(13, OUTPUT);
 }
 
-void loop()
-{
+int morseCodeLetterS(){
   // S  
   digitalWrite(13, HIGH);   
   
@@ -28,8 +27,10 @@ void loop()
   
   digitalWrite(13, LOW);    
   
-  delay(100);              
-  
+  delay(100);
+}
+
+int morseCodeLetterO(){
   // O
   
   digitalWrite(13, HIGH);   
@@ -54,33 +55,13 @@ void loop()
 
   digitalWrite(13, LOW);    
 
-  delay(100);              
-  
-  // S  
-  digitalWrite(13, HIGH);   
-  
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
- 
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
-  
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
   delay(100); 
+}
 
-  delay(3000);                
+void loop() {
+  morseCodeLetterS();
+  morseCodeLetterO();
+  morseCodeLetterS();
+  delay(1000);                 
 }
 
