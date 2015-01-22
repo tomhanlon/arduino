@@ -1,67 +1,31 @@
+int pin = 13;
+
 void setup()
 {
-  pinMode(13, OUTPUT);
+  pinMode(pin, OUTPUT);
 }
 
-int morseCodeLetterS(){
-  // S  
-  digitalWrite(13, HIGH);   
-  
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
- 
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
-  
-  delay(500);              
-  
-  digitalWrite(13, LOW);    
-  
-  delay(100);
+void loop()
+{
+  dot(); dot(); dot();
+  dash(); dash(); dash();
+  dot(); dot(); dot();
+  delay(3000);
 }
 
-int morseCodeLetterO(){
-  // O
-  
-  digitalWrite(13, HIGH);   
-
-  delay(1500);              
-
-  digitalWrite(13, LOW);    
-
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
-
-  delay(1500);              
-
-  digitalWrite(13, LOW);    
-
-  delay(100);              
-
-  digitalWrite(13, HIGH);   
-
-  delay(1500);              
-
-  digitalWrite(13, LOW);    
-
-  delay(100); 
+void dot()
+{
+  digitalWrite(pin, HIGH);
+  delay(250);
+  digitalWrite(pin, LOW);
+  delay(250);
 }
 
-void loop() {
-  morseCodeLetterS();
-  morseCodeLetterO();
-  morseCodeLetterS();
-  delay(1000);                 
+void dash()
+{
+  digitalWrite(pin, HIGH);
+  delay(750);
+  digitalWrite(pin, LOW);
+  delay(250);
 }
 
